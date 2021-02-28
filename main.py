@@ -62,6 +62,12 @@ def sort():
 # ---------------------------------------------------------
 ### USER INTERFACE HERE ###
 
+# Requirements
+# - 2 dropdown menus. (select algo,speed)
+# - 2 buttons. (generate random array,start sorting)
+# - A canvas to draw array.
+
+
 
 # Display
 window.mainloop() # Infinite loop running application as long as window is not closed.
