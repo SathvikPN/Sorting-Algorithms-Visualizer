@@ -1,8 +1,7 @@
-'''
-Main Executable file to run the visualizer project.
-Import all packages and modules in this file.
-Setup basic Graphical User Interface
-'''
+# Main Executable file to run the visualizer project.
+# Import all packages and modules in this file.
+# Setup basic Graphical User Interface
+
 
 # From tkinter import all
 from tkinter import *
@@ -25,4 +24,4 @@ window.geometry('650x350')
 
 # Display
 window.mainloop()
-''' Infinite loop running application as long as window is not closed.'''
+# Infinite loop running application as long as window is not closed.
