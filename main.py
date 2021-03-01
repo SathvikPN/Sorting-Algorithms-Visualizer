@@ -120,9 +120,9 @@ def set_speed():
   '''set sorting speed'''
 
   speed_value = {
-    'Slow': 0.2,
-    'Medium': 0.001,
-    'Fast': 0.0001,
+    'Slow': 0.3,
+    'Medium': 0.01,
+    'Fast': 0.001,
   }
 
   speed_name = speed_menu.get()
