@@ -67,6 +67,12 @@ def sort():
 # - 2 buttons. (generate random array,start sorting)
 # - A canvas to draw array.
 
+# Design
+# + UI_frame
+#   - dropdown
+#   - buttons
+# + canvas
+
 UI_frame = Frame(window, width=900, height=300, bg=BLUE)
 UI_frame.grid(row=0, column=0, padx=10, pady=5)
 
