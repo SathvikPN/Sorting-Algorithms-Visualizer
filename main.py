@@ -46,7 +46,7 @@ data = []
 # visualize randomized sequence feed as vertical bars -----
 def drawData(data,colorArray):
   '''visualize randomized sequence feed as vertical bars'''
-  
+
   # Clear canvas 
   canvas.delete('all')
 
@@ -84,6 +84,7 @@ def drawData(data,colorArray):
 
 # generate array of random values to feed sorter ----------
 def generate():
+  '''generate array of random values'''
   
   # Make data to be modify-able from within function. 
   global data 
@@ -103,10 +104,12 @@ def generate():
 
 # set sorting speed ---------------------------------------
 def set_speed():
+  '''set sorting speed'''
   pass
 
 # This will Trigger the selected algorithm and start sorting
 def sort():
+  '''Trigger the selected algorithm and start sorting'''
   pass
 
 # ---------------------------------------------------------
