@@ -92,6 +92,10 @@ b1.grid(row=2, column=0, padx=5, pady=5)
 b2 = Button(UI_frame, text='Sort', command=sort, bg = LIGHT_GRAY)
 b2.grid(row=2, column=1, padx=5, pady=5)
 
+# Canvas to draw array sequence 
+canvas = Canvas(window, width=800, height=400, bg=WHITE)
+canvas.grid(row=1,column=0, padx=10, pady=5)
+
 # Display
 window.mainloop() # Infinite loop running application as long as window is not closed.
 
