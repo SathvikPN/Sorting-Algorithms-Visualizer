@@ -43,28 +43,31 @@ data = []
 # ---------------------------------------------------------
 # FUNCTIONS
 
-# visualize randomized sequence feed as vertical bars
+# visualize randomized sequence feed as vertical bars -----
 def drawData(data,colorArray):
   pass
 
-# generate array of random values to feed sorter
-def generate():
-  # Let no. datapoints be 100
 
+
+# generate array of random values to feed sorter ----------
+def generate():
+  
   # Make data to be modify-able from within function. 
   global data 
 
   # For faster  list initialisation
   # Immutable: [obj]*n  # [0]*n Same id for each obj
   # Mutable: [obj for _ in range(n)]  Different id for each obj
-  data = [None]*100 
+
+  data = [None]*100 # Taken DataPoints 100 nos.
   for i in range(0,100):
     data[i] = random.randint(1,150) # random values
-    
 
   drawData(data, [BLUE for _ in range(len(data))])
 
-# set sorting speed
+
+
+# set sorting speed ---------------------------------------
 def set_speed():
   pass
 
