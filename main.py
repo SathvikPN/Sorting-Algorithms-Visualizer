@@ -84,6 +84,14 @@ speed_menu = ttk.Combobox(UI_frame, textvariable=speed_name, values=speed_list)
 speed_menu.grid(row=1, column=1, padx=5, pady=5)
 speed_menu.current(0)
 
+# button to generate random array 
+b1 = Button(UI_frame, text='Generate Array', command=generate, bg=LIGHT_GRAY)
+b1.grid(row=2, column=0, padx=5, pady=5)
+
+# sort button 
+b2 = Button(UI_frame, text='Sort', command=sort, bg = LIGHT_GRAY)
+b2.grid(row=2, column=1, padx=5, pady=5)
+
 # Display
 window.mainloop() # Infinite loop running application as long as window is not closed.
 
