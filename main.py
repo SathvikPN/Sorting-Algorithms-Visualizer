@@ -23,7 +23,7 @@ window = Tk() # assign window as window object name
 window.title("Sorting Algorithms Visualizer")
 window.maxsize(1200,600)
 window.config(bg = WHITE)
-window.geometry('800x400')
+window.geometry('850x700')
 
 # ---------------------------------------------------------
 # VARIABLES
@@ -49,7 +49,20 @@ def drawData(data,colorArray):
 
 # generate array of random values to feed sorter
 def generate():
-  pass
+  # Let no. datapoints be 100
+
+  # Make data to be modify-able from within function. 
+  global data 
+
+  # For faster  list initialisation
+  # Immutable: [obj]*n  # [0]*n Same id for each obj
+  # Mutable: [obj for _ in range(n)]  Different id for each obj
+  data = [None]*100 
+  for i in range(0,100):
+    data[i] = random.randint(1,150) # random values
+    
+
+  drawData(data, [BLUE for _ in range(len(data))])
 
 # set sorting speed
 def set_speed():
