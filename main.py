@@ -29,7 +29,7 @@ window = Tk() # assign window as window object name
 window.title("Sorting Algorithms Visualizer")
 window.maxsize(1200,700)
 window.config(bg = WHITE)
-window.geometry('850x700')
+window.geometry('850x550')
 
 
 
