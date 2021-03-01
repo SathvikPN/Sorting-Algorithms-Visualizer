@@ -116,7 +116,16 @@ def generate():
 # ----------------
 def set_speed():
   '''set sorting speed'''
-  pass
+
+  speed_value = {
+    'Slow': 0.3,
+    'Medium': 0.1,
+    'Fast': 0.001,
+  }
+
+  speed_name = speed_menu.get()
+  return speed_value[speed_name]
+
 
 # -----------
 def sort():
