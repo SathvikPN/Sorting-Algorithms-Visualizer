@@ -18,6 +18,8 @@ import random
 # Import colors for project
 from colors import *
 
+# Import Sorting Algorithms
+from algorithms.Bubble_sort import bubble_sort
 
 
 
@@ -130,7 +132,11 @@ def set_speed():
 # -----------
 def sort():
   '''Trigger the selected algorithm and start sorting'''
-  pass
+  global data
+  timeTick = set_speed()
+
+  if algo_menu.get() == 'Bubble-sort':
+    bubble_sort(data, drawData, timeTick)
 
 # ---------------------------------------------------------
 ### USER INTERFACE SETUP ###
