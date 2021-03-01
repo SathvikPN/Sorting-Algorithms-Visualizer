@@ -22,7 +22,7 @@ from colors import *
 from algorithms.Bubble_sort import bubble_sort
 from algorithms.Merge_sort import merge_sort
 from algorithms.Selection_sort import selection_sort
-
+from algorithms.Insertion_sort import insertion_sort
 
 # ---------------------------------------------------------
 ### ROOT WINDOW ###
@@ -44,7 +44,7 @@ window.geometry('850x550')
 # eg: via buttons
 
 algo_name = StringVar() 
-algo_list = ["Bubble-sort","Merge-sort","Selection-sort"]
+algo_list = ["Bubble-sort","Merge-sort","Selection-sort","Insertion-sort"]
 
 speed_name = StringVar()
 speed_list = ['Fast','Medium','Slow']
@@ -152,6 +152,9 @@ def sort():
 
   elif algo_menu.get() == 'Selection-sort':
     selection_sort(data, drawData, timeTick)
+
+  elif algo_menu.get() == 'Insertion-sort':
+    insertion_sort(data,drawData,timeTick)
 
 # ---------------------------------------------------------
 ### USER INTERFACE SETUP ###
