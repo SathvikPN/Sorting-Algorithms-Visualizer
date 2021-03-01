@@ -20,7 +20,7 @@ from colors import *
 
 # Import Sorting Algorithms
 from algorithms.Bubble_sort import bubble_sort
-
+from algorithms.Merge_sort import merge_sort
 
 
 # ---------------------------------------------------------
@@ -120,9 +120,9 @@ def set_speed():
   '''set sorting speed'''
 
   speed_value = {
-    'Slow': 0.3,
-    'Medium': 0.1,
-    'Fast': 0.001,
+    'Slow': 0.2,
+    'Medium': 0.001,
+    'Fast': 0.0001,
   }
 
   speed_name = speed_menu.get()
@@ -137,6 +137,9 @@ def sort():
 
   if algo_menu.get() == 'Bubble-sort':
     bubble_sort(data, drawData, timeTick)
+
+  elif algo_menu.get() == 'Merge-sort':
+    merge_sort(data, 0, len(data)-1, drawData, timeTick)
 
 # ---------------------------------------------------------
 ### USER INTERFACE SETUP ###
