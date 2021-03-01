@@ -4,6 +4,8 @@
 
 
 # ---------------------------------------------------------
+### IMPORTS ###
+
 # From tkinter import all
 from tkinter import *
 
@@ -17,18 +19,26 @@ import random
 from colors import *
 
 
+
+
 # ---------------------------------------------------------
-# Create a basic window. (Root window)
+### ROOT WINDOW ###
+
+# Create a basic tkinter window. 
 window = Tk() # assign window as window object name
 window.title("Sorting Algorithms Visualizer")
-window.maxsize(1200,600)
+window.maxsize(1200,700)
 window.config(bg = WHITE)
 window.geometry('850x700')
 
+
+
+
 # ---------------------------------------------------------
-# VARIABLES
+### VARIABLES ###
+
 # StringVar(): class to monitor changes to tkinter variables. 
-# # (eg: via buttons)
+# eg: via buttons
 
 algo_name = StringVar() 
 algo_list = ["Bubble-sort","Merge-sort"]
@@ -36,14 +46,16 @@ algo_list = ["Bubble-sort","Merge-sort"]
 speed_name = StringVar()
 speed_list = ['Fast','Medium','Slow']
 
-# Empty list fills with random values
-# when we generate new random array to feed the sorter
+# To store random values generated to feed sorter
 data = []
 
-# ---------------------------------------------------------
-# FUNCTIONS
 
-# visualize randomized sequence feed as vertical bars -----
+
+
+# ---------------------------------------------------------
+### FUNCTIONS ###
+
+# ------------------------------
 def drawData(data,colorArray):
   '''visualize randomized sequence feed as vertical bars'''
 
@@ -80,9 +92,7 @@ def drawData(data,colorArray):
   window.update_idletasks()
 
 
-
-
-# generate array of random values to feed sorter ----------
+# ---------------
 def generate():
   '''generate array of random values'''
   
@@ -94,6 +104,7 @@ def generate():
   # Mutable: [obj for _ in range(n)]  Different id for each obj
 
   data = [None]*100 # Taken DataPoints 100 nos.
+
   for i in range(0,100):
     data[i] = random.randint(1,150) # random values
 
@@ -102,18 +113,18 @@ def generate():
 
 
 
-# set sorting speed ---------------------------------------
+# ----------------
 def set_speed():
   '''set sorting speed'''
   pass
 
-# This will Trigger the selected algorithm and start sorting
+# -----------
 def sort():
   '''Trigger the selected algorithm and start sorting'''
   pass
 
 # ---------------------------------------------------------
-### USER INTERFACE HERE ###
+### USER INTERFACE SETUP ###
 
 # Requirements
 # - 2 dropdown menus. (select algo,speed)
