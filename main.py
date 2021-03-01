@@ -66,7 +66,7 @@ def drawData(data,colorArray):
 
   # Canvas Dimensions
   canvas_width = 800
-  canvas_height = 400
+  canvas_height = 400+10 # +10 for clean representation of highest bar
 
   # Width of each vertical section w.r.t total data points in feed
   x_width = canvas_width / (len(data)+1)
@@ -74,11 +74,19 @@ def drawData(data,colorArray):
   offset = 4
   spacing = 2
 
-  # 0 < normalised_Data value <= 1
+  # 0 < normalised_Data value height  <= 1
   normalised_Data = [i/max(data) for i in data]
 
   # Creating vertical bars(rectangles)
   for i,height in enumerate(normalised_Data):
+
+    # (x0,y0)
+    # *----------
+    # |         |
+    # |         |
+    # |         |
+    # ----------*
+    #         (x1,y1)
 
     # rectangle width 
     x0 = i * x_width + offset + spacing
@@ -120,7 +128,7 @@ def set_speed():
   '''set sorting speed'''
 
   speed_value = {
-    'Slow': 0.3,
+    'Slow': 0.5,
     'Medium': 0.01,
     'Fast': 0.001,
   }
@@ -173,7 +181,7 @@ speed_menu.grid(row=1, column=1, padx=5, pady=5)
 speed_menu.current(0)
 
 # button to generate random array 
-b1 = Button(UI_frame, text='Generate Array', command=generate, bg=LIGHT_GRAY)
+b1 = Button(UI_frame, text='Generate Random Sequence', command=generate, bg=LIGHT_GRAY)
 b1.grid(row=2, column=0, padx=5, pady=5)
 
 # sort button 
@@ -181,7 +189,7 @@ b2 = Button(UI_frame, text='Sort', command=sort, bg = LIGHT_GRAY)
 b2.grid(row=2, column=1, padx=5, pady=5)
 
 # Canvas to draw array sequence 
-canvas = Canvas(window, width=800, height=400, bg=WHITE)
+canvas = Canvas(window, width=800, height=400, bg=WHITE) 
 canvas.grid(row=1,column=0, padx=10, pady=5)
 
 # Display
