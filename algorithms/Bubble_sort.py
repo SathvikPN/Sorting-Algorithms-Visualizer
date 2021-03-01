@@ -4,7 +4,7 @@ import time
 from colors import *
 
 def bubble_sort(data, drawData, timeTick):
-
+  ''' Implementation of Bubble Sorting Algorithm'''
   size = len(data)
 
   for i in range(size-1):
