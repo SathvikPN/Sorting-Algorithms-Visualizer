@@ -45,7 +45,40 @@ data = []
 
 # visualize randomized sequence feed as vertical bars -----
 def drawData(data,colorArray):
-  pass
+  '''visualize randomized sequence feed as vertical bars'''
+  
+  # Clear canvas 
+  canvas.delete('all')
+
+  # Canvas Dimensions
+  canvas_width = 800
+  canvas_height = 400
+
+  # Width of each vertical section w.r.t total data points in feed
+  x_width = canvas_width / (len(data)+1)
+
+  offset = 4
+  spacing = 2
+
+  # 0 < normalised_Data value <= 1
+  normalised_Data = [i/max(data) for i in data]
+
+  # Creating vertical bars(rectangles)
+  for i,height in enumerate(normalised_Data):
+
+    # rectangle width 
+    x0 = i * x_width + offset + spacing
+    x1 = (i+1) * x_width  + offset + spacing
+
+    # rectangle height 
+    y0 = canvas_height - (height*400)
+    y1 = canvas_height
+
+    # create a rectangle
+    canvas.create_rectangle(x0,y0,x1,y1, fill = colorArray[i])
+  
+  window.update_idletasks()
+
 
 
 
@@ -64,6 +97,7 @@ def generate():
     data[i] = random.randint(1,150) # random values
 
   drawData(data, [BLUE for _ in range(len(data))])
+
 
 
 
